@@ -31,7 +31,7 @@ def nombre_mots(chain_user):
         elif not ('A' <= i <= 'Z' or 'a' <= i <= 'z' or i in ['!', '?', 'à', 'é', 'è', 'ê', 'ë', 'î', 'ï', 'ô', 'ö', 'ù', 'û', 'ü']):
             in_word = False
     print(f"Le nombre de mots est : {nombre_mots}")
-# utilises les ranges dans ascii ils sont collés dans l'ascii
+    
 majuscule(chain_user)
 minuscule(chain_user)
 nombre_mots(chain_user)
