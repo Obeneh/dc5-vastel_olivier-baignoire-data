@@ -1,13 +1,32 @@
 #Manipuler des listes et comprendre les structures de données.
-#Créez une liste des dépenses marketing mensuelles et calculez les dépenses totales de l'année.
+#Listes : Créez une liste de 10 nombres, trouvez le maximum, le minimum, et calculez la moyenne.
 
+def trouver_maximum(liste):
+    maximum = liste[0]
+    for nombre in liste:
+        if nombre > maximum:
+            maximum = nombre
+    return maximum
 
+def trouver_minimum(liste):
+    minimum = liste[0]
+    for nombre in liste:
+        if nombre < minimum:
+            minimum = nombre
+    return minimum
 
-depenses_mensuelles = [1220, 1433, 907, 1174, 1398, 945, 755, 657, 888, 425, 358, 456]
+def calculer_moyenne(liste):
+    somme = sum(liste)
+    moyenne = somme / len(liste)
+    return moyenne
 
-depenses_annuelles = 0
-for depense in depenses_mensuelles:
-    depenses_annuelles += depense
+liste_nombres = [42, 17, 8, 56, 23, 91, 34, 12, 75, 5]
 
-print(f"Les dépenses mensuelles sont : {depenses_mensuelles}")
-print(f"Les dépenses totales de l'année sont : {depenses_annuelles}")
+maximum = trouver_maximum(liste_nombres)
+minimum = trouver_minimum(liste_nombres)
+moyenne = calculer_moyenne(liste_nombres)
+
+print(f"La liste de nombres est : {liste_nombres}")
+print(f"Le maximum est : {maximum}")
+print(f"Le minimum est : {minimum}")
+print(f"La moyenne est : {moyenne}")
