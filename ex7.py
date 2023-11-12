@@ -1,4 +1,4 @@
-#Parcourir la liste des clients et afficher ceux qui ont dépensé plus de 100€.
+#Écrire une fonction qui calcule le montant total dépensé par tous les clients.
 
 def creer_liste_clients():
     liste_clients = []
