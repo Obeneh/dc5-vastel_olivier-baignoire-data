@@ -23,9 +23,13 @@ def minuscule(chain_user):
 
 def nombre_mots(chain_user):
     nombre_mots=0
+    in_word = False
     for i in chain_user:
-        if not( 'A' < i < 'Z' or 'a'<= i <= 'z') or (i == '!' or i == '?' ):
-            nombre_mots=nombre_mots+1
+        if ('A' <= i <= 'Z' or 'a' <= i <= 'z' or i in ['!', '?', 'à', 'é', 'è', 'ê', 'ë', 'î', 'ï', 'ô', 'ö', 'ù', 'û', 'ü']) and not in_word:
+            in_word = True
+            nombre_mots += 1
+        elif not ('A' <= i <= 'Z' or 'a' <= i <= 'z' or i in ['!', '?', 'à', 'é', 'è', 'ê', 'ë', 'î', 'ï', 'ô', 'ö', 'ù', 'û', 'ü']):
+            in_word = False
     print(f"Le nombre de mots est : {nombre_mots}")
 # utilises les ranges dans ascii ils sont collés dans l'ascii
 majuscule(chain_user)
